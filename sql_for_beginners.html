@@ -16,25 +16,27 @@ details {padding : 1rem; white-space: pre-wrap;}
 
 <div class='question' id='Q1'>
 
-      <h4>1. 사원번호(employee_id)가 130 초과 140 미만인 사람의 이름(first_name)과 이메일(email)을 출력하시오</h4>
+      <h4>1. 2005년 이후 채용된 사람 가운데 월급여(salary)가 10000 이상인 이들의 직무ID(job_id)를 고용된 날짜의 오름차순을 기준으로 출력하세요.</h4>
       
       <details>
             <summary>모범 답안</summary>
-            <strong>select</strong> first_name, email
+            <strong>select</strong> hire_date, job_id
             <strong>from</strong> employees
-            <strong>where</strong> employee_id <strong>between</strong> 131 <strong>and</strong> 139;
+            <strong>where</strong> salary <strong>>=</strong> 10000 
+            <strong>and</strong> hire_date <strong>between</strong> '2005/01/01' <strong>and</strong> sysdate
+            <strong>order by</strong> hire_date <strong>asc</strong>;
 
-            FIRST_NAME                               EMAIL
-            ---------------------------------------- --------------------------------------------------
-            James                                    JAMRLOW
-            TJ                                       TJOLSON
-            Jason                                    JMALLIN
-            Michael                                  MROGERS
-            Ki                                       KGEE
-            Hazel                                    HPHILTAN
-            Renske                                   RLADWIG
-            Stephen                                  SSTILES
-            John                                     JSEO
+            HIRE_DATE                                JOB_ID
+            ------------------------------------ ------------------------------------------------
+            05/01/05                                 SA_MAN
+            05/01/30                                 SA_REP
+            05/03/10                                 SA_MAN
+            05/03/11                                 SA_REP
+            05/09/21                                 AD_VP
+            05/11/11                                 SA_REP
+            06/03/23                                 SA_REP
+            07/10/15                                 SA_MAN
+            08/01/29                                 SA_MAN
       </details>
 
 </div>
