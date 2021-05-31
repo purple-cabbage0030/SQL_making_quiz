@@ -125,8 +125,8 @@ details {padding : 1rem; white-space: pre-wrap;}
 
 <div class=question id=Q5>
 
-      <h4>5. 부서ID가 10인 경우 20%, 20인 경우 15%, 30인 경우 5%의 급여 인상. 
-            사원번호(employee_id)와 email을 인상된 급여와 함께 출력하세요.</h4>
+      <h4>5. 부서ID가 10인 경우 20%, 20인 경우 15%, 30인 경우 5%의 급여 인상. <br>
+            급여가 인상된 부서에 속한 경우만 고려하여(department_id) 사원번호(employee_id)와 email을 인상된 급여와 함께 출력하세요.</h4>
       
       <details>
             <summary>모범 답안</summary>
@@ -134,8 +134,8 @@ details {padding : 1rem; white-space: pre-wrap;}
             <strong>from</strong> employees
             <strong>where</strong> department_id in (10, 20, 30);
 
-         EMPLOYEE_ID EMAIL                                     SALARY     인상분
-      ----------- -------------------------------------------------- ---------- ----------
+         EMPLOYEE_ID EMAIL                                              SALARY       인상분
+      ----------- -------------------------------------------------- ----------  ----------
         200         JWHALEN                                                  4400       5280
         201         MHARTSTE                                                13000      14950
         202         PFAY                                                     6000       6900
