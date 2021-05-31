@@ -70,8 +70,11 @@ details {padding : 1rem; white-space: pre-wrap;}
 
 
 <div class=question id=Q3>
+      
       <h4> 3. 부서(department_id)가 IT(60)인 직원 중 월급(salary)이 5000 이상인 직원들의 employee_id, first_name, last_name, salary 정보를 월급 기준 오름차순으로 정렬하세요. </h4>
-      <details><summary>모범 답안</summary>
+      
+      <details>
+            <summary>모범 답안</summary>
             <strong>select</strong> employee_id, first_name, last_name, salary
             <strong>from</strong> employees
             <strong>where</strong> department_id = 60 and salary >= 5000
@@ -82,38 +85,42 @@ details {padding : 1rem; white-space: pre-wrap;}
                     104 Bruce                       Ernst                                         6000
                     103 Alexander             Hunold                                         9000
       </details>
+      
 </div>
 
 <div class=question id=Q4>
-<h4>4. 전화번호(phone_number)의 시작이 011이고, 직원번호(employee_id)가 홀수인 직원들의 employee_id,first_name,last_name,salary,phone_number 정보를 입사일(hire_dat) 기준 오름차순으로 정렬하세요.</h4>
-<details><summary>모범 답안</summary>
-<strong>select</strong> employee_id,first_name,last_name,salary,phone_number
-<strong>from</strong> employees
-<strong>where</strong> mod(employee_id, 2) = 1 and phone_number like '011%'
-<strong>order by</strong> hire_dat <strong>asc</strong>;
+      <h4>4. 전화번호(phone_number)의 시작이 011이고, 직원번호(employee_id)가 홀수인 직원들의 employee_id,first_name,last_name,salary,phone_number 정보를 입사일(hire_dat) 기준 오름차순으로 정렬하세요.</h4>
+      <details>
+            <summary>모범 답안</summary>
+            <strong>select</strong> employee_id,first_name,last_name,salary,phone_number
+            <strong>from</strong> employees
+            <strong>where</strong> mod(employee_id, 2) = 1 and phone_number like '011%'
+            <strong>order by</strong> hire_dat <strong>asc</strong>;
 
-EMPLOYEE_ID FIRST_NAME                               LAST_NAME                                              SALARY PHONE_NUMBER
------------ ---------------------------------------- -------------------------------------------------- ---------- ----------------------------------------
-        157 Patrick                                  Sully                                                    9500 011.44.1345.929268
-        145 John                                     Russell                                                 14000 011.44.1344.429268
-        147 Alberto                                  Errazuriz                                               12000 011.44.1344.429278
-        159 Lindsey                                  Smith                                                    8000 011.44.1345.729268
-        175 Alyssa                                   Hutton                                                   8800 011.44.1644.429266
-        151 David                                    Bernstein                                                9500 011.44.1344.345268
-        169 Harrison                                 Bloom                                                   10000 011.44.1343.829268
-        153 Christopher                              Olsen                                                    8000 011.44.1344.498718
-        177 Jack                                     Livingston                                               8400 011.44.1644.429264
-        161 Sarath                                   Sewall                                                   7000 011.44.1345.529268
-        171 William                                  Smith                                                    7400 011.44.1343.629268
-        163 Danielle                                 Greene                                                   9500 011.44.1346.229268
-        155 Oliver                                   Tuvault                                                  7000 011.44.1344.486508
-        179 Charles                                  Johnson                                                  6200 011.44.1644.429262
-        149 Eleni                                    Zlotkey                                                 10500 011.44.1344.429018
-        165 David                                    Lee                                                      6800 011.44.1346.529268
-        167 Amit                                     Banda                                                    6200 011.44.1346.729268
-        173 Sundita                                  Kumar                                                    6100 011.44.1343.329268
-</details>
+            EMPLOYEE_ID FIRST_NAME                               LAST_NAME                                              SALARY PHONE_NUMBER
+            ----------- ---------------------------------------- -------------------------------------------------- ---------- ----------------------------------------
+                    157 Patrick                                  Sully                                                    9500 011.44.1345.929268
+                    145 John                                     Russell                                                 14000 011.44.1344.429268
+                    147 Alberto                                  Errazuriz                                               12000 011.44.1344.429278
+                    159 Lindsey                                  Smith                                                    8000 011.44.1345.729268
+                    175 Alyssa                                   Hutton                                                   8800 011.44.1644.429266
+                    151 David                                    Bernstein                                                9500 011.44.1344.345268
+                    169 Harrison                                 Bloom                                                   10000 011.44.1343.829268
+                    153 Christopher                              Olsen                                                    8000 011.44.1344.498718
+                    177 Jack                                     Livingston                                               8400 011.44.1644.429264
+                    161 Sarath                                   Sewall                                                   7000 011.44.1345.529268
+                    171 William                                  Smith                                                    7400 011.44.1343.629268
+                    163 Danielle                                 Greene                                                   9500 011.44.1346.229268
+                    155 Oliver                                   Tuvault                                                  7000 011.44.1344.486508
+                    179 Charles                                  Johnson                                                  6200 011.44.1644.429262
+                    149 Eleni                                    Zlotkey                                                 10500 011.44.1344.429018
+                    165 David                                    Lee                                                      6800 011.44.1346.529268
+                    167 Amit                                     Banda                                                    6200 011.44.1346.729268
+                    173 Sundita                                  Kumar                                                    6100 011.44.1343.329268
+      </details>
+      
 </div>
+      
 <div class=question id=Q5>
 
       <h4>5. 급여(salary)를 천의 자리에서 반올림했을 때 10000이 되는 사람의 이름(first_name), 성(last_name), 전화번호(phone_number)를 출력하시오</h4>
