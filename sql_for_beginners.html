@@ -90,13 +90,14 @@ details {padding : 1rem; white-space: pre-wrap;}
 
       
 <div class=question id=Q4>
-      <h4>4. 전화번호(phone_number)의 시작이 011이고, 직원번호(employee_id)가 홀수인 직원들의 employee_id,first_name,last_name,salary,phone_number 정보를 입사일(hire_dat) 기준 오름차순으로 정렬하세요.</h4>
+      <h4>4. 전화번호(phone_number)의 시작이 011이고, 직원번호(employee_id)가 홀수인 직원들의<br>
+             employee_id,vfirst_name,vlast_name,vsalary,vphone_number 정보를 입사일(hire_date) 기준 오름차순으로 정렬하세요.</h4>
       <details>
             <summary>모범 답안</summary>
-            <strong>select</strong> employee_id,first_name,last_name,salary,phone_number
+            <strong>select</strong> employee_id, first_name, last_name, salary, phone_number
             <strong>from</strong> employees
             <strong>where</strong> mod(employee_id, 2) = 1 and phone_number like '011%'
-            <strong>order by</strong> hire_dat <strong>asc</strong>;
+            <strong>order by</strong> hire_date <strong>asc</strong>;
 
             EMPLOYEE_ID FIRST_NAME                               LAST_NAME                                              SALARY PHONE_NUMBER
             ----------- ---------------------------------------- -------------------------------------------------- ---------- ----------------------------------------
